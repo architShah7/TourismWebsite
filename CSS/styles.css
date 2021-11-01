@@ -1,0 +1,558 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;1,100;1,300;1,500&display=swap");
+
+/*Used the W3CSS documentation to refer to and learn about css properties used https://www.w3schools.com/css/default.asp*/
+/*Code for image styling border taken from W3Schools website provivded above*/
+/*Flexbox documentation that I used to create a card type layout in many places
+was done with the help from the following link: https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+
+html,
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header > div:nth-child(1) {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  flex-grow: 1;
+}
+
+header > div:nth-child(1) img {
+  height: 60px;
+  padding-left: 10px;
+  padding-right: 7px;
+}
+
+.weatherDiv {
+  order: 2;
+  margin-left: auto;
+}
+
+header h1 {
+  font-size: 40px;
+  padding: 0px 20px;
+}
+
+nav {
+  width: 100%;
+  color: white;
+  background: #7a003c;
+  margin: 0;
+  padding: 0;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.4);
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+nav ul li a {
+  text-decoration: none !important;
+  color: aliceblue;
+  display: inline-block;
+  padding: 20px 30px;
+}
+
+nav ul li:hover,
+.current {
+  background: #fdbf57;
+  text-decoration: none;
+}
+
+.current a {
+  color: rgb(23, 82, 131);
+}
+
+#title {
+  text-decoration: none;
+  color: rgb(50, 58, 61);
+}
+
+#titleDiv {
+  background-color: rgb(244, 247, 247);
+}
+
+body > h1 {
+  font-weight: 100;
+  font-size: 25px;
+  padding: 20px 20px;
+}
+
+.introduction {
+  font-size: 2em;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.introduction > p {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.introduction > h2 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#introImgs {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+#introImgs img {
+  width: 33%;
+  height: 300px;
+}
+
+#featureTile {
+  background-color: rgb(238, 234, 234);
+  height: 550px;
+  padding-left: 20px;
+  padding-top: 25px;
+  padding-right: 20px;
+  margin-top: 20px;
+}
+
+#featureTile div h2 {
+  padding-left: 25px;
+}
+
+#featureImg {
+  width: 70%;
+  height: 60%;
+  margin-left: 200px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.3);
+}
+
+#explore {
+  margin-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#explore ul {
+  margin-top: 20px;
+}
+
+#explore ul li a {
+  text-decoration: none !important;
+  color: black;
+}
+
+.gridrow {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  justify-content: center;
+  box-align: center;
+  align-items: center;
+  margin-left: -3px;
+  margin-bottom: 20px;
+}
+
+.gridrow > div img {
+  width: 100%;
+  height: 200px;
+  margin: 10px auto;
+}
+
+.gridrow > div h5 {
+  font-size: 35px;
+  color: teal;
+}
+
+.gridrow > div {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+  flex-direction: column;
+  flex: 1 1 auto;
+  box-flex: 1;
+  padding: 10px;
+  margin: 10px;
+  width: 100px;
+  height: 370px;
+  border: 1px solid teal;
+  text-align: bottom;
+  position: relative;
+  top: 0;
+  transition: top ease 0.5s;
+  background-color: #f8f9fa;
+}
+
+.gridrow > div:hover {
+  top: -10px;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.4);
+}
+
+.container {
+  padding: 20px 40px 40px;
+  display: flex;
+  height: 300px;
+  margin-top: 20px;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+.container > img {
+  margin: 10px 50px 0 0;
+  width: 220px;
+  height: 220px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  object-fit: fill;
+  align-self: flex-start;
+}
+
+.foodDesc {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 90%;
+  font-size: 21px;
+}
+
+.foodTitle {
+  padding-top: 15px;
+}
+
+.odd {
+  background-color: #f8f9fa;
+}
+
+.footer {
+  margin-top: 20px;
+}
+
+.festivalType {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  justify-content: center;
+  box-align: center;
+  align-items: center;
+  margin-left: -3px;
+  margin-bottom: 20px;
+}
+
+.festivalType > div div img {
+  width: 100%;
+  height: 200px;
+  margin: 10px auto;
+}
+
+.festivalType > div h3 a {
+  font-size: 40px;
+  color: rgb(57, 57, 68);
+  margin: 0 auto;
+}
+
+.festivalType > div {
+  background-color: #f8f9fa;
+  flex-direction: column;
+  box-flex: 1;
+  padding: 30px;
+  margin: 10px;
+  width: 30%;
+  flex: 0 1 auto;
+  height: 370px;
+  border: 1px solid teal;
+  text-align: bottom;
+  position: relative;
+  top: 0;
+  transition: top ease 0.5s;
+  text-align: center;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.festivalType .lastItem {
+  flex-basis: 30%;
+  margin-right: auto;
+  margin-left: 48px;
+}
+
+.festivalType > div:hover {
+  top: -10px;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.4);
+}
+
+.festivalType > div:hover h3 a {
+  color: blue;
+}
+
+.shopcontainer {
+  padding: 20px 40px 40px;
+  display: flex;
+  height: 400px;
+  margin-top: 20px;
+  margin-left: 96.5px;
+  margin-right: 96.5px;
+  background-color: #f8f9fa;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+.shopcontainer > img {
+  margin: 20px 30px 0 0;
+  width: 450px;
+  height: 300px;
+  padding-right: 0;
+  flex-basis: 30%;
+  align-self: flex-start;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+}
+
+.shopcontainer > div {
+  padding-top: 15px;
+  padding-bottom: 20px;
+  padding-left: 4px;
+}
+
+.shopcontainer > div h2 {
+  margin-bottom: 10px;
+}
+
+.shopcontainer > div h3 {
+  margin-bottom: 10px;
+  font-size: 25px;
+}
+
+.shopcontainer > div ul {
+  margin-bottom: 10px;
+  font-size: 20px;
+  width: 90%;
+}
+
+.shopcontainer > div a {
+  font-size: 20px;
+}
+
+.tips {
+  margin-top: 40px;
+  margin-left: 90px;
+}
+
+.tips > ul {
+  margin: 10px;
+  font-size: 22px;
+}
+
+.links > h2 {
+  margin-left: 20px;
+}
+
+.links {
+  margin-top: 20px;
+}
+
+.links > ul {
+  margin-left: 30px;
+  margin-top: 10px;
+  font-size: 25px;
+}
+
+video {
+  border: 2px solid teal;
+  width: 60%;
+  margin: 20px 20px;
+  height: auto;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3);
+}
+
+.navratri {
+  background-color: rgb(238, 234, 234);
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.glimpse > h1 {
+  padding-top: 20px;
+  margin-left: 20px;
+  margin-bottom: 7px;
+}
+
+.glimpse > video {
+  margin-left: 30px;
+}
+
+#aboutVid {
+  margin-left: 20%;
+}
+
+.history {
+  font-size: 2em;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 0;
+}
+
+.history > p {
+  margin: 20px 30px;
+}
+
+.image {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
+}
+
+.attrContainer {
+  padding: 20px 40px 40px;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  height: 400px;
+  margin-top: 20px;
+  background-color: #f8f9fa;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+.attrContainer > img {
+  margin: 30px 50px 0 0;
+  width: 350px;
+  height: 300px;
+  object-fit: fill;
+  align-self: flex-start;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+}
+
+.attrContainer > div h3 {
+  margin-top: 25px;
+}
+
+.attrContainer > div ul,
+.attrContainer > div p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  width: 100%;
+  margin-right: 30px;
+}
+
+.attrContainer > div p {
+  margin-top: 20px;
+}
+
+.visuals > h1 {
+  margin: 20px 20px;
+  margin-top: 20px;
+  padding-top: 20px;
+  margin-left: 20px;
+}
+
+.visuals {
+  padding-bottom: 30px;
+}
+
+#aboutVisual {
+  padding-top: 4px;
+}
+
+#aboutVisual > h1 {
+  padding-top: 5px;
+  margin: 10px 20px;
+  margin-bottom: 20px;
+}
+
+/* the css below is taken from https://css-tricks.com/adaptive-photo-layout-with-flexbox/ and modified */
+/*--------------------------------------------*/
+.visuals > ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding-right: 20px;
+}
+
+.visuals > ul li {
+  height: 40vh;
+  flex-grow: 1;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+.visuals > ul li img {
+  max-height: 100%;
+  min-width: 100%;
+  object-fit: cover;
+  vertical-align: bottom;
+}
+
+.visuals > ul li:last-child {
+  flex-grow: 10;
+}
+
+.formContainer {
+  width: 80%;
+}
+
+.formContainer > * {
+  margin: 20px;
+  width: 100%;
+}
+
+.wishlist,
+.wishlistFood,
+.wishlistShopping {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  top: 0%;
+  left: 60%;
+  background-color: #fdbf57;
+}
+
+.wishlistShopping {
+  left: 50%;
+}
+
+.wishlistFood {
+  left: 70%;
+}
+
+.twitter-timeline {
+  position: relative;
+  width: 100%;
+  margin-left: 21%;
+}
